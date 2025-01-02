@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/manifest.json">
+    <title>My PWA</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+
+
+    </script>
+<div class="content-container"> <!-- Creating 45 grid items (5x9) --> 
+  <div class="grid"> <!-- Repeat this div 45 times --> 
+  <div class="grid-item" style="background-color: #f0f0f0;">1</div> 
+  <div class="grid-item" style="background-color: #e0e0e0;">2</div> 
+  <div class="grid-item" style="background-color: #d0d0d0;">3</div> 
+  <div class="grid-item" style="background-color: #c0c0c0;">4</div> 
+  <div class="grid-item" style="background-color: #b0b0b0;">5</div> 
+  <div class="grid-item" style="background-color: #f0f0f0;">1</div> 
+  <div class="grid-item" style="background-color: #e0e0e0;">2</div> 
+  <div class="grid-item" style="background-color: #d0d0d0;">3</div> 
+  <div class="grid-item" style="background-color: #c0c0c0;">4</div> 
+  <div class="grid-item" style="background-color: #b0b0b0;">5</div> 
+  <div class="grid-item" style="background-color: #f0f0f0;">1</div> 
+  <div class="grid-item" style="background-color: #e0e0e0;">2</div> 
+  <div class="grid-item" style="background-color: #d0d0d0;">3</div> 
+  <div class="grid-item" style="background-color: #c0c0c0;">4</div> 
+  <div class="grid-item" style="background-color: #b0b0b0;">5</div> 
+  <div class="grid-item" style="background-color: #f0f0f0;">1</div> 
+  <div class="grid-item" style="background-color: #e0e0e0;">2</div> 
+  <div class="grid-item" style="background-color: #d0d0d0;">3</div> 
+  <div class="grid-item" style="background-color: #c0c0c0;">4</div> 
+  <div class="grid-item" style="background-color: #b0b0b0;">5</div> 
+  <div class="grid-item" style="background-color: #f0f0f0;">1</div> 
+  <div class="grid-item" style="background-color: #e0e0e0;">2</div> 
+  <div class="grid-item" style="background-color: #d0d0d0;">3</div> 
+  <div class="grid-item" style="background-color: #c0c0c0;">4</div> 
+  <div class="grid-item" style="background-color: #b0b0b0;">5</div> 
+  <!-- Continue adding grid items up to 45 --> </div> 
+  </div> 
+
+  <div class="tab-bar"> 
+  <div class="tab">Home</div> 
+  <div class="tab">Search</div> 
+  <div class="tab">Library</div> 
+</div>
+
+</body>
+</html>
