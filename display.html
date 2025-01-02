@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Item</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content-display">
+        <h1 id="item-title">Item Title</h1>
+        <div id="item-content" class="display-item">Item Content</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const itemId = urlParams.get('id');
+            const bgColor = urlParams.get('color');
+            const itemContent = document.getElementById('item-content');
+            const itemTitle = document.getElementById('item-title');
+
+            // Set the content and background color based on the itemId and bgColor
+            itemTitle.textContent = `Item ${itemId.replace('item', '')}`;
+            itemContent.style.backgroundColor = bgColor;
+            itemContent.textContent = `Content for Item ${itemId.replace('item', '')}`;
+        });
+    </script>
+</body>
+</html>
